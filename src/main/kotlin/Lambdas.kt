@@ -2,7 +2,7 @@ package org.rburgos
 
 fun main() {
     println("The sum is ${sumar(a=35)}")
-    println("El mayor numero es ${encuentraMayot(35,12)}")
+    println("El mayor numero es ${encuentraMayor(35,12)}")
     muestraValores(12,35)
     println()
     val referenciaSumar = ::sumar
@@ -20,15 +20,15 @@ fun main() {
     println(result)
 }
 
-fun sumar(a: Int=0, b:Int=0):Int = a+b
+fun sumar(a: Int=0, b:Int=10):Int = a+b
 
-fun encuentraMayot(a: Int, b:Int):Int?{
+fun encuentraMayor(a: Int, b:Int):Int?{
     return if (a > b) a else b
 }
 
 fun muestraValores(a:Int, b:Int){
     println()
-    if (encuentraMayot(a,b)==a) for (i in b..a) print("$i, ") else for (i in a..b) print("$i, ")
+    if (encuentraMayor(a,b)==a) for (i in b..a) print("$i, ") else for (i in a..b) print("$i, ")
 }
 
 val sumaLambda = { a: Int, b: Int -> a+b }(5,5)

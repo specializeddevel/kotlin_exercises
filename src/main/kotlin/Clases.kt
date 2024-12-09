@@ -1,4 +1,4 @@
-package org.rburgos
+ package org.rburgos
 
 import org.rburgos.Clases.BankAccount
 
@@ -6,7 +6,7 @@ class Clases {
 
     val nombreClaseSuperior = "ClaseSuperior"
 
-    inner class BankAccount(val accountNumber: Int, var accountBalance: Double) {
+    open inner class BankAccount(val accountNumber: Int, var accountBalance: Double) {
 
         var lastName: String
             get() {
@@ -24,6 +24,7 @@ class Clases {
 
     }
 }
+
 
 fun main() {
     val clases = Clases()
